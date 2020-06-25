@@ -1,4 +1,4 @@
-console.log('before BENCHMARK_CONTENTFUL_SPACE_ID', process.env.BENCHMARK_CONTENTFUL_SPACE_ID)
+console.log('before BENCHMARK_CONTENTFUL_SPACE_ID', process.env.CONTENTFUL_SPACE_ID)
 console.log('before process.env', process.env)
 if (process.env.GATSBY_CLOUD !== 'true') {
   require("dotenv").config({
@@ -6,12 +6,12 @@ if (process.env.GATSBY_CLOUD !== 'true') {
   })
 }
 
-console.log('process.env.BENCHMARK_CONTENTFUL_SPACE_ID', process.env.BENCHMARK_CONTENTFUL_SPACE_ID)
-console.log('process.env.BENCHMARK_CONTENTFUL_ACCESS_TOKEN', process.env.BENCHMARK_CONTENTFUL_ACCESS_TOKEN)
+console.log('process.env.BENCHMARK_CONTENTFUL_SPACE_ID', process.env.CONTENTFUL_SPACE_ID)
+console.log('process.env.BENCHMARK_CONTENTFUL_ACCESS_TOKEN', process.env.CONTENTFUL_ACCESS_TOKEN)
 const contentfulConfig = {
-  spaceId: process.env.BENCHMARK_CONTENTFUL_SPACE_ID,
-  accessToken: process.env.BENCHMARK_CONTENTFUL_ACCESS_TOKEN,
-  host: process.env.BENCHMARK_CONTENTFUL_HOST,
+  spaceId: process.env.CONTENTFUL_SPACE_ID,
+  accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+  host: process.env.CONTENTFUL_HOST,
 }
 
 // BENCHMARK_REPORTING_URL is Endpoint to send metrics to
