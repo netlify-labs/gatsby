@@ -1,5 +1,5 @@
 console.log('before BENCHMARK_CONTENTFUL_SPACE_ID', process.env.BENCHMARK_CONTENTFUL_SPACE_ID)
-console.log('before BENCHMARK_CONTENTFUL_ACCESS_TOKEN', process.env.BENCHMARK_CONTENTFUL_ACCESS_TOKEN)
+console.log('before process.env', process.env)
 require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`,
 })
