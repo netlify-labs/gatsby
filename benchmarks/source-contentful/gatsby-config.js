@@ -1,8 +1,11 @@
 console.log('before BENCHMARK_CONTENTFUL_SPACE_ID', process.env.BENCHMARK_CONTENTFUL_SPACE_ID)
 console.log('before process.env', process.env)
-require("dotenv").config({
-  path: `.env.${process.env.NODE_ENV}`,
-})
+if (process.env.GATSBY_CLOUD !== 'true') {
+  require("dotenv").config({
+    path: `.env.${process.env.NODE_ENV}`,
+  })
+}
+
 console.log('process.env.BENCHMARK_CONTENTFUL_SPACE_ID', process.env.BENCHMARK_CONTENTFUL_SPACE_ID)
 console.log('process.env.BENCHMARK_CONTENTFUL_ACCESS_TOKEN', process.env.BENCHMARK_CONTENTFUL_ACCESS_TOKEN)
 const contentfulConfig = {
